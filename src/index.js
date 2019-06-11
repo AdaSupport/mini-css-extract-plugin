@@ -531,16 +531,16 @@ class MiniCssExtractPlugin {
           // and emit a warning
           const fallbackModule = bestMatch.pop();
 
-          compilation.warnings.push(
-            new Error(
-              `chunk ${chunk.name || chunk.id} [${pluginName}]\n` +
-                'Conflicting order between:\n' +
-                ` * ${fallbackModule.readableIdentifier(requestShortener)}\n` +
-                `${bestMatchDeps
-                  .map((m) => ` * ${m.readableIdentifier(requestShortener)}`)
-                  .join('\n')}`
-            )
-          );
+//           compilation.warnings.push(
+//             new Error(
+//               `chunk ${chunk.name || chunk.id} [${pluginName}]\n` +
+//                 'Conflicting order between:\n' +
+//                 ` * ${fallbackModule.readableIdentifier(requestShortener)}\n` +
+//                 `${bestMatchDeps
+//                   .map((m) => ` * ${m.readableIdentifier(requestShortener)}`)
+//                   .join('\n')}`
+//             )
+//           );
 
           usedModules.add(fallbackModule);
         }
